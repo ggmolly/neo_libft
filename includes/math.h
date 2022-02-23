@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:08 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:27:18 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 18:07:58 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,14 @@ int			ft_factorial(int n);
 long		ft_factorial_l(long n);
 long long	ft_factorial_ll(long long n);
 
+// -- fibonacci --
+int			ft_fibonacci(int n);
+long		ft_fibonacci_l(long n);
+long long	ft_fibonacci_ll(long long n);
+
+// -- is_prime --
+int			ft_is_prime(int n);
+long		ft_is_prime_l(long n);
+long long	ft_is_prime_ll(long long n);
 
 #endif
