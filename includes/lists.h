@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:30:35 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 14:49:43 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 19:29:14 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ typedef struct s_dcchain_lst
 }				t_dcchain_lst;
 
 // -- init --
-t_chain_lst			*ft_chain_new();
-t_dchain_lst		*ft_dchain_new(); // TODO
-t_dcchain_lst		*ft_dcchain_new(); // TODO
+t_chain_lst			*ft_chain_new(void *content);
+t_dchain_lst		*ft_dchain_new(void *content);
+t_dcchain_lst		*ft_dcchain_new(void *content);
 
 // -- append --
 void				ft_chain_append(t_chain_lst **lst, void *content);
-void				ft_dchain_append(t_dchain_lst **lst, void *content); // TODO
+void				ft_dchain_append(t_dchain_lst **lst, void *content);
 void				ft_dcchain_append(t_dcchain_lst **lst, void *content); // TODO
 
 // -- first --
@@ -74,11 +74,9 @@ void	ft_dcchain_extend(t_dcchain_lst **lst, void **input, size_t size);
 // -- prepend --
 void	ft_chain_prepend(t_chain_lst **lst, void *content);
 void	ft_dchain_prepend(t_dchain_lst **lst, void *content);
-void	ft_dcchain_prepend(t_dcchain_lst **lst, void *content);
+void	ft_dcchain_prepend(t_dcchain_lst **lst, void *content); // TODO
 
 #endif
-
-// preprend()	Add an element add the start of a list
 
 // copy()		Returns a copy of the list
 // extend()		Add the elements of a list (or any iterable), to the end of the current list

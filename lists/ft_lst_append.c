@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:44:38 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 14:33:22 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 19:43:38 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,40 @@ void	ft_chain_append(t_chain_lst **lst, void *content)
 	{
 		*lst = new;
 	}
+}
+
+void	ft_dchain_append(t_dchain_lst **lst, void *content)
+{
+	t_dchain_lst	*new;
+	t_dchain_lst	*last;
+	
+	new = ft_dchain_new(content);
+	if (!new)
+		return ;
+	new->next = NULL;
+	if (*lst)
+	{
+		last = ft_dchain_last(*lst);
+		last->next = new;
+		new->prev = last;
+	}
+	else
+	{
+		*lst = new;
+	}
+}
+void	ft_dcchain_append(t_dcchain_lst **lst, void *content) // TODO
+{
+	t_dcchain_lst	*new;
+	t_dcchain_lst	*last;
+	
+	new = ft_dcchain_new(content);
+	if (!new)
+		return ;
+	new->next = NULL;
+	last = ft_dcchain_last(*lst);
+	last->next = new;
+	new->prev = last;
+	(*lst)->last = new;
+
 }
