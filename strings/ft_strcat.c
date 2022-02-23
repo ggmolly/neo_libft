@@ -6,13 +6,13 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:10:14 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:01:07 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:07:43 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-void ft_strcat(t_string *dest, t_string *src)
+void	ft_strcat(t_string *dest, t_string *src)
 {
 	int	i;
 
@@ -28,10 +28,10 @@ void ft_strcat(t_string *dest, t_string *src)
 	dest->str[dest->len] = '\0';
 }
 
-t_string *ft_strncat(t_string *dest, t_string *src, size_t n)
+t_string	*ft_strncat(t_string *dest, t_string *src, size_t n)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

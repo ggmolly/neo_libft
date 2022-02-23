@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:47:50 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/22 19:59:12 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:06:10 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_string	ft_strdup(t_string s)
 {
 	t_string	new;
-	
-	new = ft_dupe_string(s.str);
+
+	new = ft_dupe_string(s);
 	return (new);
 }

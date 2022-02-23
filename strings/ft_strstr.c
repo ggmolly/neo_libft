@@ -6,16 +6,16 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:45:34 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 11:47:44 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:06:34 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-char *ft_strstr(t_string *needle, t_string haystack)
+char	*ft_strstr(t_string *needle, t_string haystack)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -37,10 +37,10 @@ char *ft_strstr(t_string *needle, t_string haystack)
 	return (NULL);
 }
 
-char *ft_strrstr(t_string *needle, t_string *haystack)
+char	*ft_strrstr(t_string *needle, t_string *haystack)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = haystack->len;
 	j = needle->len;

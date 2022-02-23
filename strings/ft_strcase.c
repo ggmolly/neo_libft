@@ -6,16 +6,16 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:48:47 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/22 19:52:13 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:08:09 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 #include "../includes/chartype.h"
 
-void ft_strlwr(t_string s)
+void	ft_strlwr(t_string s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < s.len)
@@ -26,9 +26,9 @@ void ft_strlwr(t_string s)
 	}
 }
 
-void ft_strupr(t_string s)
+void	ft_strupr(t_string s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < s.len)

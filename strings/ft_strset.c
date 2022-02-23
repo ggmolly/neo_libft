@@ -6,14 +6,14 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:23:15 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/22 19:44:19 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:05:02 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 #include <stdio.h>
 
-t_string *ft_strset(t_string *target, char c)
+t_string	*ft_strset(t_string *target, char c)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ t_string *ft_strset(t_string *target, char c)
 	return (target);
 }
 
-t_string *ft_strnset(t_string *target, char c, size_t n)
+t_string	*ft_strnset(t_string *target, char c, size_t n)
 {
 	size_t	i;
 

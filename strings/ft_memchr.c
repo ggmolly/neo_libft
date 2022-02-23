@@ -6,15 +6,15 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:55:15 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 11:56:04 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:07:52 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -26,9 +26,9 @@ void *ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-void *ft_memrchr(const void *s, int c, size_t n)
+void	*ft_memrchr(const void *s, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = n;
 	while (i > 0)

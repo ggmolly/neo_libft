@@ -6,18 +6,18 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:55:52 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/22 19:57:48 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:05:29 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-void ft_strrev(t_string *s)
+void	ft_strrev(t_string *s)
 {
-	int i;
-	int j;
-	char tmp;
-	
+	int		i;
+	int		j;
+	char	tmp;
+
 	i = 0;
 	j = s->len;
 	while (i < j)
