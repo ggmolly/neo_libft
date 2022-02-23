@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 15:02:39 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/23 18:01:10 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,12 @@ void		ft_strcpy(t_string *s, t_string *d);
 void		ft_strlwr(t_string s);
 void		ft_strrev(t_string *s);
 void		ft_strupr(t_string s);
+int			ft_ccnt(t_string s, char c);
 
 // TODO
 // ft_strsplit
 // ft_strtrim (remove blanks at the beginning and end of a string, line endings)
+// ft_replace (replace a char in a string)
 
 // -- mem functions
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
