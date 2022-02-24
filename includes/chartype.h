@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:53:11 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/22 16:14:10 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/24 14:41:08 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int	ft_islower(int c);
 int	ft_ispunct(int c);
 int	ft_isspace(int c);
 int	ft_isxdigit(int c);
+int	ft_isupper(int c);
 #endif
