@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:36:19 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/22 20:02:58 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/24 16:12:22 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,11 @@ t_string	ft_dupe_string(t_string s)
 
 	ft_malloc(&new.str, sizeof(char), s.len + 1);
 	new.len = s.len;
-	ft_strcpy(new.str, s.str);
+	ft_strcpy(&new, &s);
 	return (new);
 }
 
 void	ft_free_string(t_string *s)
 {
 	ft_free(s->str);
-}
-
-int	ft_strlen(char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
