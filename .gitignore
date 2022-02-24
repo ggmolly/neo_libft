@@ -2,3 +2,5 @@
 .vscode
 line_count.py
 a.out
+tests/chained_lst_tests
+run_test.sh
