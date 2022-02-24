@@ -6,12 +6,13 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:56:49 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:07:12 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/24 14:43:14 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 #include "../includes/chartype.h"
+#include "../includes/conversions.h"
 
 int	ft_strcmp(t_string s1, t_string s2)
 {
