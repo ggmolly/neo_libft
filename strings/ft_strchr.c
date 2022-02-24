@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:52:41 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:05:17 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/24 14:40:35 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*ft_strchr(t_string s, int c)
 			return (&s.str[i]);
 		i++;
 	}
+	return (NULL);
 }
 
 char	*ft_strrchr(t_string s, int c)
@@ -36,4 +37,5 @@ char	*ft_strrchr(t_string s, int c)
 			return (&s.str[i]);
 		i--;
 	}
+	return (NULL);
 }
