@@ -1,44 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_last.c                                      :+:      :+:    :+:   */
+/*   ft_lst_copy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 13:53:30 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 14:01:33 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/24 14:07:30 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/24 14:09:01 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lists.h"
 
-t_chain_lst	*ft_chain_last(t_chain_lst *lst)
+t_chain_lst		*ft_chain_copy(t_chain_lst *lst)
 {
+	t_chain_lst	*output;
 	t_chain_lst	*tmp;
-
+	
+	output = ft_chain_new(lst->content);
+	if (!output)
+		return (NULL);
 	tmp = lst;
-	if (tmp)
+	while (tmp)
 	{
-		while (tmp->next)
-			tmp = tmp->next;
+		ft_chain_append(&output, tmp->content);
+		tmp = tmp->next;
 	}
-	return (tmp);
-}
-
-t_dchain_lst	*ft_dchain_last(t_dchain_lst *lst)
-{
-	t_dchain_lst	*tmp;
-
-	tmp = lst;
-	if (tmp)
-	{
-		while (tmp->next)
-			tmp = tmp->next;
-	}
-	return (tmp);
-}
-
-t_dchain_lst	*ft_dcchain_last(t_dcchain_lst *lst)
-{
-	return (lst->first->prev);
+	return (output);
 }

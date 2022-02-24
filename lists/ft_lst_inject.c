@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_last.c                                      :+:      :+:    :+:   */
+/*   ft_lst_inject.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 13:53:30 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 14:01:33 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/24 14:18:51 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/24 14:20:43 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lists.h"
 
-t_chain_lst	*ft_chain_last(t_chain_lst *lst)
+void	ft_chain_inject(t_chain_lst **lst, t_chain_lst *prev, t_chain_lst *current,
+		void *content)
 {
-	t_chain_lst	*tmp;
-
-	tmp = lst;
-	if (tmp)
+	if (prev)
 	{
-		while (tmp->next)
-			tmp = tmp->next;
+		prev->next = ft_chain_new(content);
+		prev->next->next = current;
 	}
-	return (tmp);
-}
-
-t_dchain_lst	*ft_dchain_last(t_dchain_lst *lst)
-{
-	t_dchain_lst	*tmp;
-
-	tmp = lst;
-	if (tmp)
+	else
 	{
-		while (tmp->next)
-			tmp = tmp->next;
+		*lst = ft_chain_new(content);
+		(*lst)->next = current;
 	}
-	return (tmp);
-}
-
-t_dchain_lst	*ft_dcchain_last(t_dcchain_lst *lst)
-{
-	return (lst->first->prev);
 }
