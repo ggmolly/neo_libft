@@ -6,11 +6,11 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 12:57:45 by yfoucade          #+#    #+#             */
-/*   Updated: 2022/02/24 16:00:27 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:07:40 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 size_t	ft_putnbrbase(unsigned long long nbr, char base, char lower)
 {

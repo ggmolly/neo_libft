@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 13:47:54 by yfoucade          #+#    #+#             */
-/*   Updated: 2022/02/24 16:11:32 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:06:59 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int				ft_printf(const char *format, ...);
 unsigned int	ft_putchar(char c);
 unsigned int	ft_putstr(char *s);
 
