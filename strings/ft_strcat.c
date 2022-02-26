@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:10:14 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:37:09 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 18:52:39 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,19 @@
 void	ft_strcat(char *dest, char *src)
 {
 	int	i;
-
+	int	j;
+	
 	i = 0;
+	j = 0;
 	if (!dest || !src)
 		return ;
-	while (src[i])
-	{
-		dest[i] = src[i];
+	while (dest[i])
 		i++;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 	dest[i] = '\0';
 }
