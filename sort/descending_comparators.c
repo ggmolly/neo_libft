@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   comparators.c                                      :+:      :+:    :+:   */
+/*   descending_comparators.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 12:23:03 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 12:26:57 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 15:12:41 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 15:13:20 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	int_compare(void *n1, void *n2)
+int int_desc_comparator(const void *a, const void *b)
 {
-	return (*(int *)n1 - *(int *)n2);
+	return (*(int *)b - *(int *)a);
 }
 
-int	double_compare(void *n1, void *n2)
+int double_desc_comparator(const void *a, const void *b)
 {
-	return (*(double *)n1 - *(double *)n2);
+	return (*(double *)b - *(double *)a);
 }
 
-int	float_compare(void *n1, void *n2)
+int char_desc_comparator(const void *a, const void *b)
 {
-	return (*(float *)n1 - *(float *)n2);
+	return (*(char *)b - *(char *)a);
 }
 
-int	char_compare(void *n1, void *n2)
+int float_desc_comparator(const void *a, const void *b)
 {
-	return (*(char *)n1 - *(char *)n2);
+	return (*(float *)b - *(float *)a);
 }
