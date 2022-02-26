@@ -42,10 +42,10 @@ def run_tests(name: str):
 			print(Fore.LIGHTRED_EX + "Leaks were found!    " + Style.RESET_ALL)
 	except:
 		print(Fore.LIGHTRED_EX + "Failed to run Valgrind!" + Style.RESET_ALL)
-	# os.remove(binary)
+	os.remove(binary)
 print(Fore.LIGHTGREEN_EX + "Welcome to neo_libft tests !" + Style.RESET_ALL)
 
-tests = ["memory", "conversions", "chartype", "strcat", "strset", "chained_lst", "all"]
+tests = ["memory", "conversions", "chartype", "strcat", "strset", "capitalize", "chained_lst", "all"]
 tests.append("exit")
 for index, test in enumerate(tests):
 	print(Fore.LIGHTMAGENTA_EX + "{}: ".format(index) + Fore.LIGHTYELLOW_EX + test + Style.RESET_ALL)
