@@ -45,7 +45,7 @@ def run_tests(name: str):
 	os.remove(binary)
 print(Fore.LIGHTGREEN_EX + "Welcome to neo_libft tests !" + Style.RESET_ALL)
 
-tests = ["memory", "conversions", "chartype", "strcat", "strset", "capitalize", "chained_lst", "all"]
+tests = ["memory", "conversions", "chartype", "strcat", "strset", "swapcase", "capitalize", "chained_lst", "all"]
 tests.append("exit")
 for index, test in enumerate(tests):
 	print(Fore.LIGHTMAGENTA_EX + "{}: ".format(index) + Fore.LIGHTYELLOW_EX + test + Style.RESET_ALL)
