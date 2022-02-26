@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 16:07:35 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:29:29 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,12 @@ void		ft_strrev(char *s);
 void		ft_strupr(char *s);
 int			ft_ccnt(char *s, char c);
 void		ft_capitalize(char *str);
+void		ft_swapcase(char *str);
 
 // TODO
 // ft_split
 // ft_strtrim (remove blanks at the beginning and end of a string, line endings)
 // ft_replace (replace a char in a string)
-// capitalize()	Converts the first character to upper case
-// casefold()	Converts string into lower case
 // center()	Returns a centered string
 // count()	Returns the number of times a specified value occurs in a string
 // endswith()	Returns true if the string ends with the specified value
