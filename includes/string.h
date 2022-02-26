@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:32:57 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:07:35 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,26 @@
 // -- str functions
 
 char		*ft_strrstr(char *needle, char *haystack);
-char		*ft_strstr(char *needle, char haystack);
-char		*ft_strchr(char s, int c);
-char		*ft_strrchr(char s, int c);
-int			ft_strcmp(char s1, char s2);
-int			ft_strcmpi(char s1, char s2);
+char		*ft_strstr(char *needle, char *haystack);
+char		*ft_strchr(char *s, int c);
+char		*ft_strrchr(char *s, int c);
+int			ft_strcmp(char *s1, char *s2);
+int			ft_strcmpi(char *s1, char *s2);
 int			ft_strlen(char *str);
-int			ft_strncmp(char s1, char s2, size_t n);
+int			ft_strncmp(char *s1, char *s2, size_t n);
 char		*ft_strncat(char *dest, char *src, size_t n);
 char		ft_dupe_string(char s);
-char		ft_strdup(char s);
+char		*ft_strdup(char *s);
 char		*ft_strnset(char *target, char c, size_t n);
 char		*ft_strset(char *target, char c);
-void		*ft_strncpy(char *s, char *d, size_t n);
+char		*ft_strncpy(char *dest, char *src, size_t n);
 void		ft_free_string(char *s);
 void		ft_strcat(char *dest, char *src);
-void		ft_strcpy(char *s, char *d);
-void		ft_strlwr(char s);
+char		*ft_strcpy(char *dest, char *src);
+void		ft_strlwr(char *s);
 void		ft_strrev(char *s);
-void		ft_strupr(char s);
-int			ft_ccnt(char s, char c);
+void		ft_strupr(char *s);
+int			ft_ccnt(char *s, char c);
 void		ft_capitalize(char *str);
 
 // TODO
