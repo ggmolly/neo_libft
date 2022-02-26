@@ -6,22 +6,26 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:45:34 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:06:34 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:49:30 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-char	*ft_strstr(t_string *needle, t_string haystack)
+char	*ft_strstr(char *needle, char *haystack)
 {
 	int	i;
 	int	j;
+	int	haystack_len;
+	int needle_len;
 
 	i = 0;
 	j = 0;
-	while (i < haystack.len)
+	haystack_len = ft_strlen(haystack);
+	needle_len = ft_strlen(needle);
+	while (i < haystack_len)
 	{
-		if (needle->str[j] == haystack.str[i])
+		if (needle[j] == haystack[i])
 		{
 			j++;
 			i++;
@@ -31,33 +35,35 @@ char	*ft_strstr(t_string *needle, t_string haystack)
 			i = i - j;
 			j = 0;
 		}
-		if (j == needle->len)
-			return (haystack.str + i - j);
+		if (j == needle_len)
+			return (haystack + i - j);
 	}
 	return (NULL);
 }
 
-char	*ft_strrstr(t_string *needle, t_string *haystack)
+char	*ft_strrstr(char *needle, char *haystack)
 {
 	int	i;
 	int	j;
+	int	needle_len;
 
-	i = haystack->len;
-	j = needle->len;
+	i = ft_strlen(haystack);
+	j = ft_strlen(needle);
+	needle_len = j;
 	while (i >= 0)
 	{
-		if (needle->str[j] == haystack->str[i])
+		if (needle[j] == haystack[i])
 		{
 			j--;
 			i--;
 		}
 		else
 		{
-			i = i + needle->len - j - 1;
-			j = needle->len - 1;
+			i = i + needle_len - j - 1;
+			j = needle_len - 1;
 		}
 		if (j == -1)
-			return (haystack->str + i + 1);
+			return (haystack + i + 1);
 	}
 	return (NULL);
 }

@@ -6,35 +6,35 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:52:41 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 14:40:35 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:48:24 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-char	*ft_strchr(t_string s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (i < s.len)
+	while (s[i])
 	{
-		if (s.str[i] == c)
-			return (&s.str[i]);
+		if (s[i] == c)
+			return (&s[i]);
 		i++;
 	}
 	return (NULL);
 }
 
-char	*ft_strrchr(t_string s, int c)
+char	*ft_strrchr(char *s, int c)
 {
 	int	i;
 
-	i = s.len;
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s.str[i] == c)
-			return (&s.str[i]);
+		if (s[i] == c)
+			return (&s[i]);
 		i--;
 	}
 	return (NULL);

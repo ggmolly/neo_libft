@@ -6,16 +6,19 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:47:50 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:06:10 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:33:54 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
+#include "../includes/memory.h"
 
-t_string	ft_strdup(t_string s)
+char	*ft_strdup(char *s)
 {
-	t_string	new;
+	char	*output;
 
-	new = ft_dupe_string(s);
-	return (new);
+	if (!ft_malloc(&output, sizeof(char), ft_strlen(s) + 1))
+		return (NULL);
+	ft_strcpy(output, s);
+	return (output);
 }

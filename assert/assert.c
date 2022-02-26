@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:23:51 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 15:33:21 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:34:54 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void assert(int condition)
 	}
 }
 
-void assert_msg(int condition, t_string msg)
+void assert_msg(int condition, char *msg)
 {
 	if (!condition)
 	{
@@ -33,7 +33,7 @@ void assert_msg(int condition, t_string msg)
 	}
 }
 
-void assert_verbose(int condition, t_string fail, t_string success)
+void assert_verbose(int condition, char *fail, char *success)
 {
 	if (!condition)
 	{

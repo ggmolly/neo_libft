@@ -6,44 +6,42 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:10:14 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:07:43 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:37:09 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-void	ft_strcat(t_string *dest, t_string *src)
+void	ft_strcat(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	if (!dest->str || !src->str)
+	if (!dest || !src)
 		return ;
-	while (src->str[i])
+	while (src[i])
 	{
-		dest->str[dest->len] = src->str[i];
-		dest->len++;
+		dest[i] = src[i];
 		i++;
 	}
-	dest->str[dest->len] = '\0';
+	dest[i] = '\0';
 }
 
-t_string	*ft_strncat(t_string *dest, t_string *src, size_t n)
+char	*ft_strncat(char *dest, char *src, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (dest->str[i])
+	while (dest[i])
 		i++;
-	while (j < n && src->str[j])
+	while (j < n && src[j])
 	{
-		dest->str[i] = src->str[j];
-		dest->len++;
+		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	dest->str[i] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }

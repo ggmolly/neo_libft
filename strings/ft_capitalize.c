@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_string.c                                   :+:      :+:    :+:   */
+/*   ft_capitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 13:36:19 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 16:12:22 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 15:17:58 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 15:32:44 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/chartype.h"
+#include "../includes/conversions.h"
 #include "../includes/string.h"
-#include "../includes/memory.h"
 
-t_string	ft_init_string(char *str)
+void ft_capitalize(char *str)
 {
-	t_string	string;
+	int	i;
+	int	is_new_word;
 
-	string.str = str;
-	string.len = ft_strlen(str);
-	return (string);
-}
-
-t_string	ft_dupe_string(t_string s)
-{
-	t_string	new;
-
-	ft_malloc(&new.str, sizeof(char), s.len + 1);
-	new.len = s.len;
-	ft_strcpy(&new, &s);
-	return (new);
-}
-
-void	ft_free_string(t_string *s)
-{
-	ft_free(s->str);
+	is_new_word = 1;
+	i = -1;
+	while (str[++i] != '\0')
+	{
+		if (is_new_word)
+		{
+			str[i] = ft_toupper(str[i]);
+			is_new_word = 0;
+		}
+		else
+		{
+			str[i] = ft_tolower(str[i]);
+		}
+		if (!ft_isalpha(str[i]))
+		{
+			is_new_word = 1;
+		}
+	}
 }
