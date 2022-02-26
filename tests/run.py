@@ -13,6 +13,8 @@ tests = ["memory",
 	"capitalize",
 	"zfill",
 	"strip",
+	"startswith",
+	"endswith",
 	"chained_lst",
 	"all"]
 
