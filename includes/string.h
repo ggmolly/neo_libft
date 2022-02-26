@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 19:21:43 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:31:41 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,16 @@ void		ft_swapcase(char *str);
 void		ft_zfill(char *s, int n);
 
 // TODO
-// ft_split
-// ft_replace (replace a char in a string)
-// ft_center()	Returns a centered string
-// ft_count()	Returns the number of times a specified value occurs in a string
-// ft_expandtabs()	Sets the tab size of the string
-// ft_find()	Searches the string for a specified value and returns the position of where it was found
-// ft_format()	Formats specified values in a string
-// ft_format_map()	Formats specified values in a string
-// ft_index()	Searches the string for a specified value and returns the position of where it was found
-// ft_join()	Converts the elements of an iterable into a string
-// ft_ljust()	Returns a left justified version of the string
-// ft_replace()	Returns a string where a specified value is replaced with a specified value
-// ft_rfind()	Searches the string for a specified value and returns the last position of where it was found
-// ft_rindex()	Searches the string for a specified value and returns the last position of where it was found
-// ft_rjust()	Returns a right justified version of the string
-// ft_rsplit()	Splits the string at the specified separator, and returns a list
 // ft_split()	Splits the string at the specified separator, and returns a list
 // ft_splitlines()	Splits the string at line breaks and returns a list
+// ft_count()	Returns the number of times a specified value occurs in a string
+// ft_find()	Searches the string for a specified value and returns the position of where it was found
+// ft_index()	Searches the string for a specified value and returns the position of where it was found
+// ft_join()	Converts the elements of an iterable into a string
+// ft_replace()	Returns a string where a specified value is replaced with a specified value
+// ft_center()	Returns a centered string
+// ft_format()	Formats specified values in a string
+
 // -- mem functions
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
