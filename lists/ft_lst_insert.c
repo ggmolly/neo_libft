@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:17:01 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 14:22:17 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 14:16:11 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 void	ft_chain_insert(t_chain_lst **lst, void *content, int index)
 {
-	t_chain_lst	*tmp;
-	t_chain_lst	*prev;
-	int			i;
+	t_chain_lst	*new;
+	t_chain_lst	*current;
 
-	tmp = *lst;
-	prev = NULL;
-	i = 0;
-	while (tmp)
+	index++;
+	if (!lst || !content)
+		return ;
+	if (index == 0)
 	{
-		if (i++ == index)
-		{
-			ft_chain_inject(lst, prev, tmp, content);
-			return ;
-		}
-		prev = tmp;
-		tmp = tmp->next;
+		ft_chain_prepend(lst, content);
+		return ;
 	}
+	current = *lst;
+	while (--index && current)
+		current = current->next;
+	if (!current)
+		return ;
+	new = ft_chain_new(content);
+	if (!new)
+		return ;
+	new->next = current;
+	new->prev = current->prev;
+	current->prev->next = new;
+	current->prev = new;
 }

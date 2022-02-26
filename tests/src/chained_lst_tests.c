@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:23:21 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 17:09:14 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:07:55 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../../includes/assert.h"
 #include "../../includes/string.h"
 #include "../../includes/memory.h"
-#include "../../includes/ft_printf.h"
+#include "../../includes/printf.h"
 #include "../../includes/put.h"
 #include "../../includes/constants.h"
 
@@ -46,6 +46,7 @@ int main(void)
 	t_chain_lst *lst = ft_chain_new(&one);
 	assert_verbose(lst != NULL, new_fail, new_success);
 	assert_verbose(*(int *)lst->content == 1, new_fail, new_success);
+	
 	// Append new item
 	ft_chain_append(&lst, &two);
 	t_chain_lst *new = lst->next;

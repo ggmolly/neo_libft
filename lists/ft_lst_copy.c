@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:07:30 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 14:09:01 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 14:00:03 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_chain_lst		*ft_chain_copy(t_chain_lst *lst)
 	if (!output)
 		return (NULL);
 	tmp = lst;
+	tmp = tmp->next;
 	while (tmp)
 	{
 		ft_chain_append(&output, tmp->content);

@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_first.c                                     :+:      :+:    :+:   */
+/*   ft_lst_get.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 13:52:06 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 12:23:40 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 14:24:22 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 14:24:47 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lists.h"
 
-t_chain_lst			*ft_chain_first(t_chain_lst *lst)
+t_chain_lst *ft_chain_get(t_chain_lst *lst, int index)
 {
-	return (lst);
+	t_chain_lst *current;
+	int i;
+	
+	i = 0;
+	current = lst;
+	while (current)
+	{
+		if (i == index)
+			return (current);
+		current = current->next;
+		i++;
+	}
 }

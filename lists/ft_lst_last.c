@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:53:30 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 14:01:33 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 12:23:22 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,4 @@ t_chain_lst	*ft_chain_last(t_chain_lst *lst)
 			tmp = tmp->next;
 	}
 	return (tmp);
-}
-
-t_dchain_lst	*ft_dchain_last(t_dchain_lst *lst)
-{
-	t_dchain_lst	*tmp;
-
-	tmp = lst;
-	if (tmp)
-	{
-		while (tmp->next)
-			tmp = tmp->next;
-	}
-	return (tmp);
-}
-
-t_dchain_lst	*ft_dcchain_last(t_dcchain_lst *lst)
-{
-	return (lst->first->prev);
 }
