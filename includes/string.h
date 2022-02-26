@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 17:27:26 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 17:41:18 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,12 @@ int			ft_ccnt(char *s, char c);
 void		ft_capitalize(char *str);
 void		ft_swapcase(char *str);
 void		ft_zfill(char *s, int n);
+void		ft_strip(char *s);
+void		ft_lstrip(char *s);
+void		ft_rstrip(char *s);
+
 // TODO
 // ft_split
-// ft_strtrim (remove blanks at the beginning and end of a string, line endings)
 // ft_replace (replace a char in a string)
 // ft_center()	Returns a centered string
 // ft_count()	Returns the number of times a specified value occurs in a string
@@ -57,7 +60,6 @@ void		ft_zfill(char *s, int n);
 // ft_index()	Searches the string for a specified value and returns the position of where it was found
 // ft_join()	Converts the elements of an iterable into a string
 // ft_ljust()	Returns a left justified version of the string
-// ft_lstrip()	Returns a left trim version of the string
 // ft_maketrans()	Returns a translation table to be used in translations
 // ft_partition()	Returns a tuple where the string is parted into three parts
 // ft_replace()	Returns a string where a specified value is replaced with a specified value
@@ -66,13 +68,10 @@ void		ft_zfill(char *s, int n);
 // ft_rjust()	Returns a right justified version of the string
 // ft_rpartition()	Returns a tuple where the string is parted into three parts
 // ft_rsplit()	Splits the string at the specified separator, and returns a list
-// ft_rstrip()	Returns a right trim version of the string
 // ft_split()	Splits the string at the specified separator, and returns a list
 // ft_splitlines()	Splits the string at line breaks and returns a list
 // ft_startswith()	Returns true if the string starts with the specified value
-// ft_strip()	Returns a trimmed version of the string
 // ft_translate()	Returns a translated string
-// ft_zfill()	Fills the string with a specified number of 0 values at the beginning
 // -- mem functions
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
