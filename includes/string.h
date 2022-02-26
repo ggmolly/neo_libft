@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 17:41:18 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:07:33 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,18 +60,14 @@ void		ft_rstrip(char *s);
 // ft_index()	Searches the string for a specified value and returns the position of where it was found
 // ft_join()	Converts the elements of an iterable into a string
 // ft_ljust()	Returns a left justified version of the string
-// ft_maketrans()	Returns a translation table to be used in translations
-// ft_partition()	Returns a tuple where the string is parted into three parts
 // ft_replace()	Returns a string where a specified value is replaced with a specified value
 // ft_rfind()	Searches the string for a specified value and returns the last position of where it was found
 // ft_rindex()	Searches the string for a specified value and returns the last position of where it was found
 // ft_rjust()	Returns a right justified version of the string
-// ft_rpartition()	Returns a tuple where the string is parted into three parts
 // ft_rsplit()	Splits the string at the specified separator, and returns a list
 // ft_split()	Splits the string at the specified separator, and returns a list
 // ft_splitlines()	Splits the string at line breaks and returns a list
 // ft_startswith()	Returns true if the string starts with the specified value
-// ft_translate()	Returns a translated string
 // -- mem functions
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
