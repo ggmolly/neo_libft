@@ -15,6 +15,8 @@ tests = ["memory",
 	"strip",
 	"startswith",
 	"endswith",
+	"split",
+        "center",
 	"chained_lst",
 	"all"]
 

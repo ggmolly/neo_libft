@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 19:31:41 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/27 20:31:23 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,17 @@ void		ft_strrev(char *s);
 void		ft_strupr(char *s);
 void		ft_swapcase(char *str);
 void		ft_zfill(char *s, int n);
-
+int			ft_index(char *haybale, char *needle);
+int			ft_count_words(char *haystack, char *needle);
+char		**ft_split(char *str, char *separator);
+char		*ft_strsub(char const *s, unsigned int start, size_t len);
+char		*ft_center(char *s, int padding);
+int			ft_strcspn(char *str, char *charset);
 // TODO
 // ft_split()	Splits the string at the specified separator, and returns a list
 // ft_splitlines()	Splits the string at line breaks and returns a list
-// ft_count()	Returns the number of times a specified value occurs in a string
-// ft_find()	Searches the string for a specified value and returns the position of where it was found
-// ft_index()	Searches the string for a specified value and returns the position of where it was found
 // ft_join()	Converts the elements of an iterable into a string
 // ft_replace()	Returns a string where a specified value is replaced with a specified value
-// ft_center()	Returns a centered string
 // ft_format()	Formats specified values in a string
 
 // -- mem functions
