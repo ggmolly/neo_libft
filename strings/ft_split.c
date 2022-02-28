@@ -6,13 +6,14 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:32:03 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/27 20:37:46 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 15:03:43 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 #include "../includes/memory.h"
 #include "../includes/printf.h"
+#include <stdio.h>
 
 char	**malloc_table(int size)
 {
@@ -20,7 +21,7 @@ char	**malloc_table(int size)
 
 	if (!ft_malloc(&tab, sizeof(char *), size + 1))
 		return (NULL);
-	tab[size] = NULL;
+	tab[size + 1] = NULL;
 	return (tab);
 }
 
@@ -42,31 +43,27 @@ char	*ft_strcpyr(char *src, int start, int end)
 	return (dest);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char *str, char *word)
 {
-	char	**tab;
+	char 	**output;
 	int		i;
-	int		j;
-	int		k;
-	int		len;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	len = ft_strlen(str);
-	tab = malloc_table(len);
-	if (!tab)
+	int		start;
+	int		end;
+	
+	output = malloc_table(ft_count_words(str, word) + 1);
+	if (!output)
 		return (NULL);
-	while (str[i])
+	start = 0;
+	i = 0;
+	end = ft_index(str, word);
+	while (end != -1)
 	{
-		if (ft_strcspn(str + i, charset) == 0)
-		{
-			i++;
-			continue ;
-		}
-		tab[j] = ft_strcpyr(str, i, i + ft_strcspn(str + i, charset));
-		i += ft_strcspn(str + i, charset);
-		j++;
+		ft_printf("%s\n", str);
+		output[i] = ft_strcpyr(str, start, end);
+		str += end + 1;
+		end = ft_index(str, word);
+		i++;
 	}
-	return (tab);
+	output[i] = ft_strdup(str);
+	return (output);
 }

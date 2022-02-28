@@ -3,6 +3,7 @@ from glob import glob
 import subprocess
 import os
 import sys
+import traceback
 
 tests = ["memory",
 	"conversions",
@@ -16,7 +17,7 @@ tests = ["memory",
 	"startswith",
 	"endswith",
 	"split",
-        "center",
+    "center",
 	"chained_lst",
 	"all"]
 
@@ -48,6 +49,12 @@ def run_tests(name: str):
 		subprocess.check_call(["./" + binary])
 		print(Fore.LIGHTGREEN_EX + name + " test ran successfully!" + Style.RESET_ALL)
 	except:
+		if "SIGSEGV" in str(traceback.format_exc()):
+			print(Fore.LIGHTRED_EX + name + " test has crashed (SIGSEGV)!" + Style.RESET_ALL)
+			return
+		elif "SIGABRT" in str(traceback.format_exc()):
+			print(Fore.LIGHTRED_EX + name + " test has crashed (SIGABRT)!" + Style.RESET_ALL)
+			return
 		print(Fore.LIGHTRED_EX + name + " test failed to run!" + Style.RESET_ALL)
 	print(Fore.LIGHTYELLOW_EX + "Checking for leaks..." + Style.RESET_ALL, end="\r")
 	try:
