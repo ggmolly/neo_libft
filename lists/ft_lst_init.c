@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 21:59:49 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 22:00:59 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 22:30:23 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../includes/memory.h"
 #include "../includes/string.h"
 
-t_chain_lst	*ft_lst_init(void)
+t_chain_lst	*ft_chain_init(void)
 {
 	t_chain_lst	*lst;
 
