@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:11:42 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 14:32:52 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 21:49:58 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_chain_pop(t_chain_lst **lst, int index)
 	t_chain_lst	*prev;
 	void		*ret;
 	
-	if (!lst || !*lst)
+	if ((*lst)->content == NULL && (*lst)->next == NULL && (*lst)->prev == NULL)
 		return (NULL);
 	current = *lst;
 	prev = NULL;
