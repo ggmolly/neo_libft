@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 21:57:57 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 23:02:52 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,9 @@ t_chain_lst	*ft_split_lines(char *str);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_center(char *s, int padding);
 int			ft_strcspn(char *str, char *charset);
+char		*ft_strjoin(char *separator, t_chain_lst *iterable);
 
 // TODO
-// ft_splitlines()	Splits the string at line breaks and returns a list
-// ft_join()	Converts the elements of an iterable into a string
 // ft_replace()	Returns a string where a specified value is replaced with a specified value
 // ft_format()	Formats specified values in a string
 

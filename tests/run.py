@@ -18,6 +18,7 @@ tests = ["memory",
 	"endswith",
 	"split",
     "center",
+	"strjoin",
 	"chained_lst",
 	"all"]
 
