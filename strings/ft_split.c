@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:32:03 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 22:31:07 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 23:31:27 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcpyr(char *src, int start, int end)
 	int		i;
 
 	i = 0;
-	if (!ft_malloc(&dest, sizeof(char), end - start + 1))
+	if (!ft_malloc(&dest, sizeof(char), end - start))
 		return (NULL);
 	while (start < end)
 	{
