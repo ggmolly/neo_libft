@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 21:59:49 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 22:30:23 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 22:48:40 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ t_chain_lst	*ft_chain_init(void)
 
 	if (!ft_malloc(&lst, sizeof(t_chain_lst), 1))
 		return (NULL);
-	ft_bzero(&lst, sizeof(t_chain_lst));
+	ft_bzero(lst, sizeof(t_chain_lst));
 	return (lst);
 }
