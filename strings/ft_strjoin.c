@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 22:14:41 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 23:06:39 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 23:29:06 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_concat(char *dest, char *src)
 
 	i = 0;
 	j = 0;
+	if (!dest || !src)
+		return ;
 	while (dest[i])
 		i++;
 	while (src[j])
