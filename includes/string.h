@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/27 20:31:23 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 21:57:10 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
+# include "../includes/lists.h"
 
 // -- str functions
 
@@ -50,12 +50,12 @@ void		ft_swapcase(char *str);
 void		ft_zfill(char *s, int n);
 int			ft_index(char *haybale, char *needle);
 int			ft_count_words(char *haystack, char *needle);
-char		**ft_split(char *str, char *separator);
+t_chain_lst	*ft_split(char *str, char *word);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_center(char *s, int padding);
 int			ft_strcspn(char *str, char *charset);
+
 // TODO
-// ft_split()	Splits the string at the specified separator, and returns a list
 // ft_splitlines()	Splits the string at line breaks and returns a list
 // ft_join()	Converts the elements of an iterable into a string
 // ft_replace()	Returns a string where a specified value is replaced with a specified value

@@ -6,24 +6,12 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:32:03 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 15:03:43 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/28 21:54:46 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 #include "../includes/memory.h"
-#include "../includes/printf.h"
-#include <stdio.h>
-
-char	**malloc_table(int size)
-{
-	char	**tab;
-
-	if (!ft_malloc(&tab, sizeof(char *), size + 1))
-		return (NULL);
-	tab[size + 1] = NULL;
-	return (tab);
-}
 
 char	*ft_strcpyr(char *src, int start, int end)
 {
@@ -43,27 +31,25 @@ char	*ft_strcpyr(char *src, int start, int end)
 	return (dest);
 }
 
-char	**ft_split(char *str, char *word)
+t_chain_lst	*ft_split(char *str, char *word)
 {
-	char 	**output;
-	int		i;
-	int		start;
-	int		end;
-	
-	output = malloc_table(ft_count_words(str, word) + 1);
-	if (!output)
+	t_chain_lst	*output;
+	int			start;
+	int			end;
+	int			sep_len;
+
+	if (!ft_malloc(&output, sizeof(t_chain_lst), 1))
 		return (NULL);
+	ft_bzero(output, sizeof(t_chain_lst));
+	sep_len = ft_strlen(word);
 	start = 0;
-	i = 0;
 	end = ft_index(str, word);
 	while (end != -1)
 	{
-		ft_printf("%s\n", str);
-		output[i] = ft_strcpyr(str, start, end);
-		str += end + 1;
+		ft_chain_append(&output, ft_strcpyr(str, start, end));
+		str += end + sep_len;
 		end = ft_index(str, word);
-		i++;
 	}
-	output[i] = ft_strdup(str);
+	ft_chain_append(&output, ft_strdup(str));
 	return (output);
 }
