@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_swapcase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 16:25:15 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 16:31:13 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/string.h"
+#include "../includes/chartype.h"
+#include "../includes/conversions.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+void	ft_swapcase(char *str)
 {
-	int i;
-	int cnt;
+	int	i;
 
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] == c)
-			cnt++;
+		if (ft_isupper(str[i]))
+			str[i] = ft_tolower(str[i]);
+		else if (ft_islower(str[i]))
+			str[i] = ft_toupper(str[i]);
 		i++;
 	}
-	return (cnt);
 }

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_endswith.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 19:11:17 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 19:21:51 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+int	ft_endswith(char *s, char *suffix)
 {
-	int i;
-	int cnt;
+	int	i;
+	int	j;
 
-	i = 0;
-	cnt = 0;
-	while (s[i])
+	if (ft_strlen(s) < ft_strlen(suffix))
+		return (0);
+	i = ft_strlen(s) - ft_strlen(suffix);
+	j = 0;
+	while (suffix[j])
 	{
-		if (s[i] == c)
-			cnt++;
+		if (s[i] != suffix[j])
+			return (0);
 		i++;
+		j++;
 	}
-	return (cnt);
+	return (1);
 }

@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_index.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 19:34:27 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 19:35:00 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/string.h"
-
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+int	ft_index(char *haybale, char *needle)
 {
 	int i;
-	int cnt;
+	int j;
+	int k;
 
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	while (haybale[i])
 	{
-		if (s[i] == c)
-			cnt++;
+		j = 0;
+		k = i;
+		while (needle[j])
+		{
+			if (haybale[k] != needle[j])
+				break ;
+			j++;
+			k++;
+		}
+		if (!needle[j])
+			return (i);
 		i++;
 	}
-	return (cnt);
+	return (-1);
 }

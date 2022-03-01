@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_capitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 15:17:58 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 16:19:09 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/chartype.h"
+#include "../includes/conversions.h"
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+void ft_capitalize(char *str)
 {
-	int i;
-	int cnt;
+	int	i;
+	int	is_new_word;
 
-	i = 0;
-	cnt = 0;
-	while (s[i])
+	is_new_word = 1;
+	i = -1;
+	while (str[++i] != '\0')
 	{
-		if (s[i] == c)
-			cnt++;
-		i++;
+		if (is_new_word)
+		{
+			str[i] = ft_toupper(str[i]);
+			is_new_word = 0;
+		}
+		else
+		{
+			str[i] = ft_tolower(str[i]);
+		}
+		if (!ft_isalpha(str[i]))
+		{
+			is_new_word = 1;
+		}
 	}
-	return (cnt);
 }

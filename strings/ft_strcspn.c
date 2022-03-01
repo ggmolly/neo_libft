@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/27 20:30:45 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/27 20:31:16 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+int	ft_strcspn(char *str, char *charset)
 {
 	int i;
-	int cnt;
+	int j;
+	int len;
 
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	len = ft_strlen(str);
+	while (str[i])
 	{
-		if (s[i] == c)
-			cnt++;
+		j = 0;
+		while (charset[j])
+		{
+			if (str[i] == charset[j])
+				return (i);
+			j++;
+		}
 		i++;
 	}
-	return (cnt);
+	return (len);
 }

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_zfill.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 17:20:02 by jallerha          #+#    #+#             */
+/*   Updated: 2022/03/01 13:46:03 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/memory.h"
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+char	*ft_zfill(char *s, int n)
 {
-	int i;
-	int cnt;
+	int		zeroes;
+	char	*output;
 
-	i = 0;
-	cnt = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			cnt++;
-		i++;
-	}
-	return (cnt);
+	zeroes = n - ft_strlen(s);
+	if (zeroes <= 0)
+		return (s);
+	if (!ft_malloc(&output, sizeof(char), ft_strlen(s) + zeroes + 1))
+		return (NULL);
+	ft_memset(output, '0', zeroes);
+	ft_strncpy(output + zeroes, s, ft_strlen(s));
+	return (output);
 }

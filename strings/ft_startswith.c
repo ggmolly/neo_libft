@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_startswith.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 19:11:18 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 19:16:14 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+int		ft_startswith(char *s, char *prefix)
 {
-	int i;
-	int cnt;
+	int	i;
 
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	if (ft_strlen(s) < ft_strlen(prefix))
+		return (0);
+	while (prefix[i])
 	{
-		if (s[i] == c)
-			cnt++;
+		if (s[i] != prefix[i])
+			return (0);
 		i++;
 	}
-	return (cnt);
+	return (1);
 }

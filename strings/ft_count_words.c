@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 19:35:17 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 21:11:31 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/string.h"
-
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+int	ft_count_words(char *haystack, char *needle)
 {
 	int i;
-	int cnt;
+	int j;
+	int k;
+	int	count;
 
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	j = 0;
+	k = 0;
+	count = 0;
+	while (haystack[i])
 	{
-		if (s[i] == c)
-			cnt++;
+		j = 0;
+		k = i;
+		while (needle[j])
+		{
+			if (haystack[k] != needle[j])
+				break ;
+			j++;
+			k++;
+		}
+		if (!needle[j])
+			count++;
 		i++;
 	}
-	return (cnt);
+	return (count);
 }

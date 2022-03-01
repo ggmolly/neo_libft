@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:23:21 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:07:55 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 11:58:10 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int main(void)
 {
+	return (0);
 	// Lambda ints
 	int zero = 0;
 	int one = 1;

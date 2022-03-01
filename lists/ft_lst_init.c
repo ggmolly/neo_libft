@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_lst_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/28 21:59:49 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/28 22:48:40 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/lists.h"
+#include "../includes/memory.h"
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+t_chain_lst	*ft_chain_init(void)
 {
-	int i;
-	int cnt;
+	t_chain_lst	*lst;
 
-	i = 0;
-	cnt = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			cnt++;
-		i++;
-	}
-	return (cnt);
+	if (!ft_malloc(&lst, sizeof(t_chain_lst), 1))
+		return (NULL);
+	ft_bzero(lst, sizeof(t_chain_lst));
+	return (lst);
 }

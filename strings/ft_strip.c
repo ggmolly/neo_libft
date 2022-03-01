@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_strip.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 17:37:44 by jallerha          #+#    #+#             */
+/*   Updated: 2022/03/01 13:40:37 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
+#include "../includes/chartype.h"
+#include <stdio.h>
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+void	ft_strip(char *s)
+{
+	ft_lstrip(s);
+	ft_rstrip(s);
+}
+
+void	ft_lstrip(char *s)
 {
 	int i;
-	int cnt;
-
+	
 	i = 0;
-	cnt = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			cnt++;
+	while (s[i] && (ft_isspace(s[i])))
 		i++;
-	}
-	return (cnt);
+	ft_memmove(s, s + i, ft_strlen(s) - i + 1);
+}
+
+void	ft_rstrip(char *s)
+{
+	int i;
+	
+	i = ft_strlen(s) - 1;
+	while (i >= 0 && (ft_isspace(s[i])))
+		i--;
+	s[i + 1] = '\0';
 }

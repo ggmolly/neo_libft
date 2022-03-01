@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/24 16:11:44 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:47:42 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,43 +15,52 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-typedef struct t_string
-{
-	char	*str;
-	int		len;
-}				t_string;
-
-t_string	ft_init_string(char *str);
+# include "../includes/lists.h"
 
 // -- str functions
 
-char		*ft_strrstr(t_string *needle, t_string *haystack);
-char		*ft_strstr(t_string *needle, t_string haystack);
-char		*ft_strchr(t_string s, int c);
-char		*ft_strrchr(t_string s, int c);
-int			ft_strcmp(t_string s1, t_string s2);
-int			ft_strcmpi(t_string s1, t_string s2);
+char		*ft_strchr(char *s, int c);
+char		*ft_strcpy(char *dest, char *src);
+char		*ft_strdup(char *s);
+char		*ft_strncat(char *dest, char *src, size_t n);
+char		*ft_strncpy(char *dest, char *src, size_t n);
+char		*ft_strnset(char *target, char c, size_t n);
+char		*ft_strrchr(char *s, int c);
+char		*ft_strrstr(char *needle, char *haystack);
+char		*ft_strset(char *target, char c);
+char		*ft_strstr(char *needle, char *haystack);
+char		ft_dupe_string(char s);
+int			ft_ccnt(char *s, char c);
+int			ft_endswith(char *s, char *suffix);
+int			ft_startswith(char *s, char *prefix);
+int			ft_strcmp(char *s1, char *s2);
+int			ft_strcmpi(char *s1, char *s2);
 int			ft_strlen(char *str);
-int			ft_strncmp(t_string s1, t_string s2, size_t n);
-t_string	*ft_strncat(t_string *dest, t_string *src, size_t n);
-t_string	ft_dupe_string(t_string s);
-t_string	ft_strdup(t_string s);
-t_string	*ft_strnset(t_string *target, char c, size_t n);
-t_string	*ft_strset(t_string *target, char c);
-void		*ft_strncpy(t_string *s, t_string *d, size_t n);
-void		ft_free_string(t_string *s);
-void		ft_strcat(t_string *dest, t_string *src);
-void		ft_strcpy(t_string *s, t_string *d);
-void		ft_strlwr(t_string s);
-void		ft_strrev(t_string *s);
-void		ft_strupr(t_string s);
-int			ft_ccnt(t_string s, char c);
+int			ft_strncmp(char *s1, char *s2, size_t n);
+void		ft_capitalize(char *str);
+void		ft_free_string(char *s);
+void		ft_lstrip(char *s);
+void		ft_rstrip(char *s);
+void		ft_strcat(char *dest, char *src);
+void		ft_strip(char *s);
+void		ft_strlwr(char *s);
+void		ft_strrev(char *s);
+void		ft_strupr(char *s);
+void		ft_swapcase(char *str);
+char		*ft_zfill(char *s, int n);
+int			ft_index(char *haybale, char *needle);
+int			ft_count_words(char *haystack, char *needle);
+t_chain_lst	*ft_split(char *str, char *word);
+t_chain_lst	*ft_split_lines(char *str);
+char		*ft_strsub(char const *s, unsigned int start, size_t len);
+char		*ft_center(char *s, int padding);
+int			ft_strcspn(char *str, char *charset);
+char		*ft_strjoin(char *separator, t_chain_lst *iterable);
+char		*ft_replace(char *str, char *old, char *new);
 
 // TODO
-// ft_split
-// ft_strtrim (remove blanks at the beginning and end of a string, line endings)
-// ft_replace (replace a char in a string)
+// ft_replace()	Returns a string where a specified value is replaced with a specified value
+// ft_format()	Formats specified values in a string
 
 // -- mem functions
 int			ft_memcmp(const void *s1, const void *s2, size_t n);

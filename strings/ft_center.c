@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_center.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/27 19:51:24 by jallerha          #+#    #+#             */
+/*   Updated: 2022/03/01 13:48:34 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/memory.h"
 #include "../includes/string.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+char	*ft_center(char *s, int padding)
 {
-	int i;
-	int cnt;
-
+	char	*output;
+	int		i;
+	int		j;
+	
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	j = 0;
+	if (!ft_malloc(&output, sizeof(char), ft_strlen(s) + padding + 1))
+		return (NULL);
+	while (i < padding / 2)
 	{
-		if (s[i] == c)
-			cnt++;
+		output[i] = ' ';
 		i++;
 	}
-	return (cnt);
+	while (s[j])
+	{
+		output[i] = s[j];
+		i++;
+		j++;
+	}
+	while (i < padding + ft_strlen(s))
+	{
+		output[i] = ' ';
+		i++;
+	}
+	output[i] = '\0';
+	return (output);
 }

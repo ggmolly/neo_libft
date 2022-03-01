@@ -6,37 +6,36 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 20:00:19 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:06:19 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:07:06 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-void	ft_strcpy(t_string *s, t_string *d)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	while (s->str[i])
+	while (src[i] != '\0')
 	{
-		d->str[i] = s->str[i];
+		dest[i] = src[i];
 		i++;
 	}
-	d->str[i] = '\0';
-	d->len = i;
+	dest[i] = '\0';
+	return (dest);
 }
 
-void	*ft_strncpy(t_string *s, t_string *d, size_t n)
+char	*ft_strncpy(char *dest, char *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < n && s->str[i])
+	while (i < n && src[i])
 	{
-		d->str[i] = s->str[i];
+		dest[i] = src[i];
 		i++;
 	}
-	d->str[i] = '\0';
-	d->len = i;
-	return (d);
+	dest[i] = '\0';
+	return (dest);
 }

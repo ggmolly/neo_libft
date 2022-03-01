@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ccnt.c                                          :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:44:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:44 by jallerha         ###   ########.fr       */
+/*   Created: 2022/02/26 21:11:51 by jallerha          #+#    #+#             */
+/*   Updated: 2022/02/26 21:21:15 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
+#include "../includes/memory.h"
 
-// Returns the number of characters c in the string s
-int ft_ccnt(char *s, char c)
+char *ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	int cnt;
-
+	char *str;
+	size_t i;
+	
 	i = 0;
-	cnt = 0;
-	while (s[i])
+	if (!s)
+		return (NULL);
+	if (!ft_malloc(&str, sizeof(char), len + 1))
+		return (NULL);
+	while (i < len)
 	{
-		if (s[i] == c)
-			cnt++;
+		str[i] = s[start + i];
 		i++;
 	}
-	return (cnt);
+	str[i] = '\0';
+	return (str);
 }
