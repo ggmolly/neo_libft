@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:30:35 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 14:55:53 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:37:53 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ int			ft_chain_count(t_chain_lst *lst);
  * 
  * @param lst The chained list.
  * @param content The item to search.
+ * @param content_size The size of the content (sizeof(content_type)).
  * @return int The index of the item in the chained list.
  */
-int			ft_chain_index(t_chain_lst *lst, void *content);
+int	ft_chain_index(t_chain_lst *lst, void *content, size_t content_size);
 
 /**
  * @brief Returns a copy of the list
