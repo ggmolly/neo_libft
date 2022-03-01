@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:30:35 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 15:37:53 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:12:19 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,8 +126,9 @@ void		ft_chain_prepend(t_chain_lst **lst, void *content);
  * 
  * @param lst The list to remove the item from.
  * @param content The content of the item to remove.
+ * @param content_size The size of the content (sizeof(content_type)).
  */
-void		ft_chain_remove(t_chain_lst **lst, void *content);
+void	ft_chain_remove(t_chain_lst **lst, void *content, size_t content_size);
 
 /**
  * @brief Reverse the passed list.
