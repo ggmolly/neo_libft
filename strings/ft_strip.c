@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 17:37:44 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 18:22:28 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:40:37 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_rstrip(char *s)
 	int i;
 	
 	i = ft_strlen(s) - 1;
-	while (s[i] && (ft_isspace(s[i])))
+	while (i >= 0 && (ft_isspace(s[i])))
 		i--;
 	s[i + 1] = '\0';
 }
