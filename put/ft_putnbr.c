@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:50:46 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:09:37 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 22:32:45 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 #include "../includes/put.h"
 #include "../includes/conversions.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-		return ;
-	}
+		return (write(fd, "-2147483648", 11));
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
@@ -35,4 +32,5 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd(n + '0', fd);
 	}
+	return (0);
 }

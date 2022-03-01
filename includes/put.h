@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:32:39 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 15:11:34 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 22:33:12 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
  * 
  * @param n The integer to print
  * @param fd The file descriptor
+ * @return int Non-zero if INT_MIN is printed
  */
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_fd(int n, int fd);
 
 /**
  * @brief Print a string and a line-feed (\n)
@@ -45,6 +46,7 @@ int		ft_putstr_fd(char *string, int fd);
  * 
  * @param c The char to print
  * @param fd The file descriptor
+ * @return int The number of characters printed
  */
-void	ft_putchar_fd(char c, int fd);
+int	ft_putchar_fd(char c, int fd);
 #endif

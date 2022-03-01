@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 12:57:45 by yfoucade          #+#    #+#             */
-/*   Updated: 2022/02/26 15:07:40 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 22:30:23 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ size_t	ft_putdec(long long nbr)
 
 size_t	ft_puthex(unsigned long nbr)
 {
-	write(1, "0x", 2);
-	return (2 + ft_putnbrbase(nbr, 16, 1));
+	int	i;
+	
+	i = write(1, "0x", 2);
+	return (i + ft_putnbrbase(nbr, 16, 1));
 }
 
 size_t	ft_putcsp(char converter, va_list ap)
