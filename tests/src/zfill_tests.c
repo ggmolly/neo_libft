@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 17:26:32 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 13:27:50 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:45:29 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,6 @@ int main(void)
 	test_8 = ft_zfill(test_8, 15);
 	test_9 = ft_zfill(test_9, 15);
 	
-	ft_zfill(test_2, 15);
-	ft_zfill(test_3, 15);
-	ft_zfill(test_4, 15);
-	ft_zfill(test_5, 15);
-	ft_zfill(test_6, 15);
-	ft_zfill(test_7, 15);
-	ft_zfill(test_8, 15);
-	ft_zfill(test_9, 15);
 	assert_verbose(ft_strcmp(test_1, "0000hello world") == 0, "test_1 failed", "test_1 passed");
 	assert_verbose(ft_strcmp(test_2, "0000Hello world") == 0, "test_2 failed", "test_2 passed");
 	assert_verbose(ft_strcmp(test_3, "0000HELLO WORLD") == 0, "test_3 failed", "test_3 passed");
