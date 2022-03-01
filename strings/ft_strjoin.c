@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 22:14:41 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 23:29:06 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:56:33 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,9 @@ char		*ft_strjoin(char *separator, t_chain_lst *iterable)
 	t_chain_lst	*tmp;
 	
 	size = ft_get_size(iterable) + (ft_strlen(separator) * (ft_chain_count(iterable)));
-	if (!ft_malloc(&output, sizeof(char), size))
+	if (!ft_malloc(&output, sizeof(char), size + 1))
 		return (NULL);
+	ft_bzero(output, size + 1);
 	i = 0;
 	tmp = iterable;
 	while (iterable)
@@ -71,6 +72,6 @@ char		*ft_strjoin(char *separator, t_chain_lst *iterable)
 		}
 		iterable = iterable->next;
 	}
-	output[size - 1] = '\0';
+	output[size] = '\0';
 	return (output);
 }
