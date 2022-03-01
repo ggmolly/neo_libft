@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:12:08 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 18:07:58 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:19:51 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 // -- abs --
 int			ft_abs(int n);
 long		ft_abs_l(long n);
-long long 	ft_abs_ll(long long n);
-char 		ft_abs_c(char n);
+long long	ft_abs_ll(long long n);
+char		ft_abs_c(char n);
 
 // -- pow --
 int			ft_pow(int n, int pow);

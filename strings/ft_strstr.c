@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:45:34 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 15:49:30 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:25:16 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strstr(char *needle, char *haystack)
 	int	i;
 	int	j;
 	int	haystack_len;
-	int needle_len;
+	int	needle_len;
 
 	i = 0;
 	j = 0;

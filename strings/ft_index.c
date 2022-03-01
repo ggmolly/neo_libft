@@ -6,15 +6,15 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:34:27 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 19:35:00 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:22:05 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_index(char *haybale, char *needle)
 {
-	int i;
-	int j;
-	int k;
+	int	i;
+	int	j;
+	int	k;
 
 	i = 0;
 	while (haybale[i])

@@ -6,11 +6,11 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 18:09:34 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 18:10:14 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:20:38 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_fibonacci(int n)
+int	ft_fibonacci(int n)
 {
 	if (n < 0)
 		return (-1);

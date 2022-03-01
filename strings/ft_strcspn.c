@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 20:30:45 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/27 20:31:16 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:22:30 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_strcspn(char *str, char *charset)
 {
-	int i;
-	int j;
-	int len;
+	int	i;
+	int	j;
+	int	len;
 
 	i = 0;
 	len = ft_strlen(str);

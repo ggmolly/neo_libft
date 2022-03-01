@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 13:47:42 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:18:42 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,6 @@ char		*ft_center(char *s, int padding);
 int			ft_strcspn(char *str, char *charset);
 char		*ft_strjoin(char *separator, t_chain_lst *iterable);
 char		*ft_replace(char *str, char *old, char *new);
-
-// TODO
-// ft_replace()	Returns a string where a specified value is replaced with a specified value
-// ft_format()	Formats specified values in a string
 
 // -- mem functions
 int			ft_memcmp(const void *s1, const void *s2, size_t n);

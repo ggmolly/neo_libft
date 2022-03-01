@@ -6,15 +6,15 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:35:17 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 21:11:31 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:22:41 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_count_words(char *haystack, char *needle)
 {
-	int i;
-	int j;
-	int k;
+	int	i;
+	int	j;
+	int	k;
 	int	count;
 
 	i = 0;

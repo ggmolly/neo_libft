@@ -6,13 +6,13 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:11:18 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 19:16:14 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:25:54 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/string.h"
 
-int		ft_startswith(char *s, char *prefix)
+int	ft_startswith(char *s, char *prefix)
 {
 	int	i;
 

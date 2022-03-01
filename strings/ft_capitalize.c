@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 15:17:58 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 16:19:09 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:23:33 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../includes/conversions.h"
 #include "../includes/string.h"
 
-void ft_capitalize(char *str)
+void	ft_capitalize(char *str)
 {
 	int	i;
 	int	is_new_word;

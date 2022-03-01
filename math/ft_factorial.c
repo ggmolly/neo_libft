@@ -6,11 +6,11 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:25:09 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:25:49 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:21:06 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_factorial(int n)
+int	ft_factorial(int n)
 {
 	if (n < 0)
 		return (0);
@@ -19,7 +19,7 @@ int			ft_factorial(int n)
 	return (n * ft_factorial(n - 1));
 }
 
-long		ft_factorial_l(long n)
+long	ft_factorial_l(long n)
 {
 	if (n < 0)
 		return (0);

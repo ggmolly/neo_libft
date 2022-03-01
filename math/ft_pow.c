@@ -6,11 +6,11 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:14:38 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 12:15:34 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:20:33 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_pow(int n, int pow)
+int	ft_pow(int n, int pow)
 {
 	int			i;
 	int			result;
@@ -25,7 +25,7 @@ int ft_pow(int n, int pow)
 	return (result);
 }
 
-long ft_pow_l(long n, int pow)
+long	ft_pow_l(long n, int pow)
 {
 	int			i;
 	long		result;
@@ -40,7 +40,7 @@ long ft_pow_l(long n, int pow)
 	return (result);
 }
 
-long long ft_pow_ll(long long n, int pow)
+long long	ft_pow_ll(long long n, int pow)
 {
 	int			i;
 	long long	result;

@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 23:08:15 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 23:34:27 by jallyerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:23:12 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_replace(char *str, char *old, char *new)
 	int		new_size;
 
 	found = ft_count_words(str, old);
-	new_size = ft_strlen(str) - (ft_strlen(old) * found) + (ft_strlen(new) * found) + 1;
+	new_size = ft_strlen(str) - (ft_strlen(old) * found)
+		+ (ft_strlen(new) * found) + 1;
 	if (new_size == 0)
 		return (ft_strdup(""));
 	next_sep = ft_index(str, old);

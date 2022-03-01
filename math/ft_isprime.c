@@ -6,14 +6,14 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 18:08:39 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/23 18:09:53 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:21:32 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_prime(int n)
+int	ft_is_prime(int n)
 {
-	int i;
-	
+	int	i;
+
 	i = 2;
 	while (i < n)
 	{
@@ -26,8 +26,8 @@ int		ft_is_prime(int n)
 
 long	ft_is_prime_l(long n)
 {
-	long i;
-	
+	long	i;
+
 	i = 2;
 	while (i < n)
 	{
@@ -40,8 +40,8 @@ long	ft_is_prime_l(long n)
 
 long long	ft_is_prime_ll(long long n)
 {
-	long long i;
-	
+	long long	i;
+
 	i = 2;
 	while (i < n)
 	{

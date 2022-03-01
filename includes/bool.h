@@ -6,12 +6,12 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:12:34 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 19:13:32 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:18:32 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BOOL_H
 # define BOOL_H
-# define true 1
-# define false 0
+# define TRUE 1
+# define FALSE 0
 #endif
