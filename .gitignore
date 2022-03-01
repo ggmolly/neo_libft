@@ -5,3 +5,4 @@ a.out
 tests/chained_lst_tests
 run_test.sh
 tests/*_tests
+benchmark/*.a
