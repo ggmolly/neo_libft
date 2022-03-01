@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 17:26:32 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/26 17:32:31 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:27:50 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,16 @@ int main(void)
 	char *test_8 = ft_strdup(" ");
 	char *test_9 = ft_strdup("AS4-fDSF7-fc1xs48-FD41c asd4c1v7F 1SDF7421xv8a 1a8v7c1 a67r1c");
 	
-	ft_zfill(test_1, 15);
+	test_1 = ft_zfill(test_1, 15);
+	test_2 = ft_zfill(test_2, 15);
+	test_3 = ft_zfill(test_3, 15);
+	test_4 = ft_zfill(test_4, 15);
+	test_5 = ft_zfill(test_5, 15);
+	test_6 = ft_zfill(test_6, 15);
+	test_7 = ft_zfill(test_7, 15);
+	test_8 = ft_zfill(test_8, 15);
+	test_9 = ft_zfill(test_9, 15);
+	
 	ft_zfill(test_2, 15);
 	ft_zfill(test_3, 15);
 	ft_zfill(test_4, 15);
@@ -36,7 +45,6 @@ int main(void)
 	ft_zfill(test_7, 15);
 	ft_zfill(test_8, 15);
 	ft_zfill(test_9, 15);
-
 	assert_verbose(ft_strcmp(test_1, "0000hello world") == 0, "test_1 failed", "test_1 passed");
 	assert_verbose(ft_strcmp(test_2, "0000Hello world") == 0, "test_2 failed", "test_2 passed");
 	assert_verbose(ft_strcmp(test_3, "0000HELLO WORLD") == 0, "test_3 failed", "test_3 passed");
