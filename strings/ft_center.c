@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 19:51:24 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/27 20:00:21 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:48:34 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_center(char *s, int padding)
 	
 	i = 0;
 	j = 0;
-	if (!ft_malloc(&output, sizeof(char), ft_strlen(s) + padding))
+	if (!ft_malloc(&output, sizeof(char), ft_strlen(s) + padding + 1))
 		return (NULL);
 	while (i < padding / 2)
 	{
