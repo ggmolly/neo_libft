@@ -62,12 +62,22 @@ def run_tests(name: str):
 	try:
 		stdout, stderr = subprocess.Popen(["valgrind", "--leak-check=full", "./" + binary], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
 		# Check if stderr or stdout contains "no leaks"
-		if "no leaks" in stdout.decode() or "no leaks" in stderr.decode():
+		if "no leaks are possible" in stdout.decode() or "no leaks are possible" in stderr.decode():
 			print(Fore.LIGHTGREEN_EX + "No leaks were found!    " + Style.RESET_ALL)
 		else:
 			print(Fore.LIGHTRED_EX + "Leaks were found!    " + Style.RESET_ALL)
 	except:
 		print(Fore.LIGHTRED_EX + "Failed to run Valgrind!" + Style.RESET_ALL)
+	print(Fore.LIGHTYELLOW_EX + "Checking for invalid memory operations..." + Style.RESET_ALL, end="\r")
+	try:
+		stdout, stderr = subprocess.Popen(["valgrind", "--leak-check=full", "./" + binary], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
+		# Check if stderr or stdout contains "no leaks"
+		if "ERROR SUMMARY: 0 errors from 0 contexts" in stdout.decode() or "ERROR SUMMARY: 0 errors from 0 contexts" in stderr.decode():
+			print(Fore.LIGHTGREEN_EX + "No invalid operations were found !        " + Style.RESET_ALL)
+		else:
+			print(Fore.LIGHTRED_EX + "Invalid memory operations were found !    " + Style.RESET_ALL)
+	except:
+		print(Fore.LIGHTRED_EX + "Failed to run Valgrind!                   " + Style.RESET_ALL)
 	if len(sys.argv) == 1:
 		os.remove(binary)
 print(Fore.LIGHTGREEN_EX + "Welcome to neo_libft tests !" + Style.RESET_ALL)
