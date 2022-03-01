@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/02/28 23:21:18 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:47:42 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void		ft_strlwr(char *s);
 void		ft_strrev(char *s);
 void		ft_strupr(char *s);
 void		ft_swapcase(char *str);
-void		ft_zfill(char *s, int n);
+char		*ft_zfill(char *s, int n);
 int			ft_index(char *haybale, char *needle);
 int			ft_count_words(char *haystack, char *needle);
 t_chain_lst	*ft_split(char *str, char *word);
