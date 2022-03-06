@@ -130,7 +130,7 @@
 # define GREY93 "\033[38;5;255m"
 # define HONEYDEW2 "\033[38;5;194m"
 # define HOTPINK1 "\033[38;5;205m"
-# define HOTPINK2"\033[38;5;206m"
+# define HOTPINK2 "\033[38;5;206m"
 # define HOTPINK3 "\033[38;5;169m"
 # define HOTPINK4 "\033[38;5;132m"
 # define HOTPINK5 "\033[38;5;168m"
