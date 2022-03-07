@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 15:35:54 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/07 02:42:18 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
  * 
  * @param s The string
  * @param c The character to find
- * @return char* The pointer to the first occurrence of the character c in the string s
+ * @return char* The pointer to the 
+ * first occurrence of the character c in the string s
  */
 char		*ft_strchr(char *s, int c);
 
@@ -67,7 +68,8 @@ char		*ft_strncpy(char *dest, char *src, size_t n);
  * @brief Append and prepend padding spaces to the string s
  * 
  * @param s The string to pad
- * @param padding The number of spaces to pad (if odd, the right side will be padded more)
+ * @param padding The number of spaces to pad 
+ * (if odd, the right side will be padded more)
  * @return char* The pointer to a copy the padded string
  */
 char		*ft_center(char *s, int padding);
@@ -103,20 +105,24 @@ char		*ft_strjoin(char *separator, t_chain_lst *iterable);
 char		*ft_strnset(char *target, char c, size_t n);
 
 /**
- * @brief Search for the last occurrence of the character c in the string s
+ * @brief Search for the last occurrence of
+ *  the character c in the string s
  * 
  * @param s The string
  * @param c The character to find
- * @return char* The pointer to the last occurrence of the character c in the string s
+ * @return char* The pointer to the last
+ *  occurrence of the character c in the string s
  */
 char		*ft_strrchr(char *s, int c);
 
 /**
- * @brief Search for the last occurrence of the string needle in the string haystack
+ * @brief Search for the last occurrence of the string 
+ * needle in the string haystack
  * 
  * @param needle The string to find
  * @param haystack The string to search in
- * @return char* The pointer to the last occurrence of the string needle in the string haystack
+ * @return char* The pointer to the last occurrence of 
+ * the string needle in the string haystack
  */
 char		*ft_strrstr(char *needle, char *haystack);
 
@@ -134,12 +140,14 @@ char		*ft_strset(char *target, char c);
  * 
  * @param needle The string to find
  * @param haystack  The string to search in
- * @return char* The pointer to the first occurrence of the string needle in the string haystack
+ * @return char* The pointer to the first occurrence
+ *  of the string needle in the string haystack
  */
 char		*ft_strstr(char *needle, char *haystack);
 
 /**
- * @brief Return the substring of s starting at index start and ending at index end
+ * @brief Return the substring of s starting at index 
+ * start and ending at index end
  * 
  * @param s The string to cut
  * @param start The index of the first character to cut
@@ -171,7 +179,8 @@ int			ft_ccnt(char *s, char c);
  * 
  * @param haystack The string to search in
  * @param needle The string to find
- * @return int The number of occurrences of the string needle in the string haystack
+ * @return int The number of occurrences of the string
+ *  needle in the string haystack
  */
 int			ft_count_words(char *haystack, char *needle);
 
@@ -189,7 +198,8 @@ int			ft_endswith(char *s, char *suffix);
  * 
  * @param haystack The string to search in
  * @param needle The string to find
- * @return int The index of the first occurrence of the string needle in the string haystack
+ * @return int The index of the first occurrence of the 
+ * string needle in the string haystack
  */
 int			ft_index(char *haystack, char *needle);
 

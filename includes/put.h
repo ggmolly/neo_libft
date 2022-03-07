@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:32:39 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 22:33:12 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/07 02:39:22 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ int		ft_putstr_fd(char *string, int fd);
  * @param fd The file descriptor
  * @return int The number of characters printed
  */
-int	ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd(char c, int fd);
 #endif
