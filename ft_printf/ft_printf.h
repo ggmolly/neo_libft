@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 13:47:54 by yfoucade          #+#    #+#             */
-/*   Updated: 2022/02/26 15:06:59 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/08 18:10:29 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-unsigned int	ft_putchar(char c);
-unsigned int	ft_putstr(char *s);
+unsigned int	ft_putchar(char c, int fd);
+unsigned int	ft_putstr(char *s, int fd);
 
-size_t			ft_putnbrbase(unsigned long long nbr, char base, char lower);
-size_t			ft_putdec(long long nbr);
-size_t			ft_puthex(unsigned long nbr);
-size_t			ft_putcsp(char converter, va_list ap);
+size_t			ft_putnbrbase(unsigned long long nbr, char base,
+					char lower, int fd);
+size_t			ft_putdec(long long nbr, int fd);
+size_t			ft_puthex(unsigned long nbr, int fd);
+size_t			ft_putcsp(int fd, char converter, va_list ap);
 
 #endif
