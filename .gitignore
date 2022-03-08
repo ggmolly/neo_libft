@@ -7,3 +7,4 @@ run_test.sh
 tests/*_tests
 benchmark/*.a
 benchmark/results/*.json
+auto_makefile.py
