@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:43:03 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 15:09:56 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/19 16:17:08 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_alloc_lst {
  * @param size n-bytes to allocate if type
  * @return int 0 if success, -1 if error
  */
-int	ft_malloc(void *ptr, const size_t type_size, const size_t size);
+int		ft_malloc(void *ptr, const size_t type_size, const size_t size);
 
 /**
  * @brief Free a pointer malloc'd using ft_free, double free safe
@@ -35,12 +35,20 @@ int	ft_malloc(void *ptr, const size_t type_size, const size_t size);
  * @param ptr The pointer to free
  * @return int 0 if success, -1 if error
  */
-int	ft_free(void *ptr);
+int		ft_free(void *ptr);
 
 /**
  * @brief Free all pointers malloc'd using ft_malloc, double free safe
  * 
  * @return int 0 if success, -1 if error
  */
-int	ft_full_free(void);
+int		ft_full_free(void);
+
+/**
+ * @brief Returns a copy of ptr, realloc'd to new_size
+ * 
+ * @param ptr The pointer to reallocate
+ * @param new_size Size of the new pointer
+ */
+void	*ft_realloc(void *ptr, size_t new_size);
 #endif

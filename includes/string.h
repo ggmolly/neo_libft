@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/07 02:42:18 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/20 18:06:09 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -405,4 +405,12 @@ void		*ft_memset(void *b, int c, size_t len);
  * @param n The number of bytes to set
  */
 void		ft_bzero(void *s, size_t n);
+
+/**
+ * @brief Returns a new malloc'd concatenated string of s1 and s2
+ * 
+ * @param s1 The first string
+ * @param s2 The second string
+ */
+char	*ft_strsjoin(char *s1, char *s2);
 #endif

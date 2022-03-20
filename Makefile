@@ -13,6 +13,7 @@ SRCS =  ft_printf/ft_printf.c \
 		strings/ft_strcpy.c \
 		strings/ft_strcspn.c \
 		strings/ft_center.c \
+		strings/ft_strsjoin.c \
 		strings/ft_startswith.c \
 		strings/ft_strcmp.c \
 		strings/ft_zfill.c \
@@ -59,6 +60,7 @@ SRCS =  ft_printf/ft_printf.c \
 		chartype/ft_isdigit.c \
 		chartype/ft_islower.c \
 		memory/ft_memory.c \
+		memory/realloc.c \
 		lists/ft_lst_prepend.c \
 		lists/ft_lst_last.c \
 		lists/ft_lst_init.c \
@@ -74,6 +76,9 @@ SRCS =  ft_printf/ft_printf.c \
 		lists/ft_lst_count.c \
 		lists/ft_lst_first.c \
 		lists/ft_lst_index.c \
+		file/read_file.c \
+		file/read_n_bytes.c \
+		file/file_size.c \
 		put/ft_putchar.c \
 		put/ft_putstr.c \
 		put/ft_putendl.c \
@@ -94,7 +99,7 @@ RM = rm -f
 
 INC_DIR = includes
 
-CFLAGS =  -Wall -Wextra -Werror -O2
+CFLAGS =  -Wall -Wextra -Werror -O2 -g3
 
 .c.o:
 	${CC} ${CFLAGS} -c -I ${INC_DIR} $< -o ${<:.c=.o}
