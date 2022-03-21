@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 13:34:07 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/20 18:06:09 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/03/21 11:36:33 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -412,5 +412,5 @@ void		ft_bzero(void *s, size_t n);
  * @param s1 The first string
  * @param s2 The second string
  */
-char	*ft_strsjoin(char *s1, char *s2);
+char		*ft_strsjoin(char *s1, char *s2);
 #endif
