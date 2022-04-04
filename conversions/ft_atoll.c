@@ -6,35 +6,35 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 22:33:44 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/09 15:22:08 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/04/04 14:57:48 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/chartype.h"
 
-long long	ft_atoll(const char *str)
+long long	ft_atoll(const char *s)
 {
-	int				i;
-	long long		res;
-	int				negative;
+	int				signe;
+	long long		n;
+	register int	i;
+	register char	c;
 
-	i = 0;
-	res = 0;
-	negative = 1;
-	if (!str)
-		return (-1);
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	signe = 1;
+	i = -1;
+	n = 0;
+	c = s[++i];
+	while (ft_isblank(c))
+		c = s[++i];
+	if (c == 45 || c == 43)
 	{
-		if (str[i] == '-')
-			negative *= -1;
-		i++;
+		if (c == '-')
+			signe = -1;
+		c = s[++i];
 	}
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(c))
 	{
-		res = res * 10 + (str[i] - 48);
-		i++;
+		n = n * 10 + c - 48;
+		c = s[++i];
 	}
-	return (res * negative);
+	return (n * signe);
 }
