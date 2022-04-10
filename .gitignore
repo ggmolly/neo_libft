@@ -1,5 +1,6 @@
 .idea
 .vscode
+*.o
 line_count.py
 a.out
 tests/chained_lst_tests
