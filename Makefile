@@ -117,4 +117,7 @@ fclean: clean
 
 re: fclean all
 
+test: $(NAME)
+	@python3 unit_test/run.py 
+
 .PHONY: all clean fclean re
