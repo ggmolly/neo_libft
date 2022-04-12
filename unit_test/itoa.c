@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "includes/conversions.h"
+#include "includes/memory.h"
 
 void check(int i, char *expected)
 {
@@ -11,6 +12,7 @@ void check(int i, char *expected)
 		printf("P");
 	else
 		printf("F");
+	ft_free(&s);
 }
 
 int main(void)
