@@ -6,14 +6,14 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:11:42 by jallerha          #+#    #+#             */
-/*   Updated: 2022/03/01 22:26:08 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/04/12 15:59:18 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lists.h"
 #include "../includes/memory.h"
 
-void	*ft_chain_pop(t_chain_lst **lst, int index)
+t_chain_lst	*ft_chain_pop(t_chain_lst **lst, int index)
 {
 	t_chain_lst	*current;
 	t_chain_lst	*next;
@@ -32,8 +32,7 @@ void	*ft_chain_pop(t_chain_lst **lst, int index)
 				prev->next = next;
 			else
 				*lst = next;
-			ft_free(current);
-			return (current->content);
+			return (current);
 		}
 		prev = current;
 		current = next;
