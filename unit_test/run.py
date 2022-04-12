@@ -2,8 +2,9 @@ import random
 import string
 import subprocess
 import os
+import sys
 from glob import glob
-
+from typing import List
 # Constants
 LIBFT_PATH="../libft.a"
 COMPILER="clang"
@@ -57,13 +58,25 @@ def check_leaks(path: str) -> bool:
 	:param path: path to the compiled file
 	:return: True if the file leaks, False otherwise
 	"""
-	try:
-		subprocess.check_call(["valgrind", "--leak-check=full", "--error-exitcode=1", "./" + path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-		return False
-	except:
-		return True
+	p = subprocess.Popen(["valgrind", "--leak-check=full", "./" + path], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+	_, err = p.communicate()
+	return "All heap blocks were freed -- no leaks are possible" not in str(err)
 
-def run_test(path: str, index: int, total: int) -> tuple:
+def is_skipped(current_test: str) -> bool:
+	"""
+	Returns True or False if the test must be run or not
+	:param current_test: the current test
+	:param all_sources: List of all tests found
+	:return: whether the test must be skipped or not
+	"""
+	if len(sys.argv[1:]) == 0:
+		return False
+	copy = sys.argv[1:]
+	for i in range(len(copy)):
+		copy[i] = copy[i].split('/')[-1]
+	return not current_test in copy
+
+def run_test(path: str, index: int, total: int, skip=False) -> tuple:
 	"""
 	Runs the passed C source file and print test summary
 	:param path: path to the source file
@@ -74,11 +87,19 @@ def run_test(path: str, index: int, total: int) -> tuple:
 	fails, successes, crashes, leaking = 0, 0, 0, False
 	if not norm_check(path):
 		print(f"{RESULTS['N']['color']}{RESULTS['N']['character']}[1;0m")
-		return
+		return (1, 0, 0, False)
 	print("[38;5;14mCompiling : " + path + "[0m", end="\r")
-	compiled = "./" + compile(path)
 	padding = " " * (13 - len(os.path.basename(path)))
-	print("[K\r[38;5;206m[{}]".format(os.path.basename(path)) + f"[0m{padding}- ", end="")
+	print("[K\r[38;5;14m[{}]".format(os.path.basename(path)) + f"[0m{padding}- ", end="")
+	if skip:
+		print(f"{RESULTS['S']['color']}{RESULTS['S']['character']}[1;0m")
+		return (0, 0, 0, False)
+	compiled_path = compile(path)
+	if compiled_path is None:
+		print(f"{RESULTS['X']['color']}{RESULTS['X']['character']}[1;0m")
+		os.remove(compiled_path)
+		return (1, 0, 0, False)
+	compiled = "./" + compiled_path
 	# Run compiled file and get STDOUT
 	try:
 		output = subprocess.check_output(compiled, stderr=subprocess.STDOUT).decode("utf-8").strip()
@@ -96,6 +117,7 @@ def run_test(path: str, index: int, total: int) -> tuple:
 		crashes += 1
 	if check_leaks(compiled):
 		print("[38;5;229mL", end="")
+		output += "L"
 		leaking = True
 	padding = " " * (50 - len(output))
 	print(padding + '[38;5;206m - [{}/{} - {:.2f}%][1;0m'.format(index, total, (index / total) * 100))
@@ -115,7 +137,7 @@ if __name__ == '__main__':
 		print("[38;5;208mNo test found[1;0m")
 		exit(0)
 	for index, source in enumerate(sources):
-		fail, success, crash, leak = run_test(source, index + 1, total)
+		fail, success, crash, leak = run_test(source, index + 1, total, skip=is_skipped(source))
 		fails += fail
 		crashes += crash
 		passed += success
