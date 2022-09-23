@@ -4,6 +4,7 @@ SRCS =  ft_printf/ft_printf.c \
 		ft_printf/ft_printf_utils.c \
 		ft_printf/ft_fprintf.c \
 		ft_printf/ft_printf_utils_2.c \
+		get_next_line/get_next_line.c \
 		assert/assert.c \
 		strings/ft_endswith.c \
 		strings/ft_strcat.c \
@@ -93,13 +94,13 @@ SRCS =  ft_printf/ft_printf.c \
 
 OBJS := ${SRCS:.c=.o}
 
-CC = clang
+CC = cc
 
 RM = rm -f
 
 INC_DIR = includes
 
-CFLAGS =  -Wall -Wextra -Werror -O2 -g3
+CFLAGS =  -Wall -Wextra -Werror
 
 .c.o:
 	${CC} ${CFLAGS} -c -I ${INC_DIR} $< -o ${<:.c=.o}
