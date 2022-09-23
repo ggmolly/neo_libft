@@ -6,7 +6,7 @@
 /*   By: jallerha <jallerha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 12:30:35 by jallerha          #+#    #+#             */
-/*   Updated: 2022/04/12 15:59:09 by jallerha         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:43:12 by jallerha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,5 +146,5 @@ void		ft_chain_reverse(t_chain_lst **lst);
  * @param index The index of the item to remove.
  * @return void* The item removed.
  */
-t_chain_lst		*ft_chain_pop(t_chain_lst **lst, int index);
+t_chain_lst	*ft_chain_pop(t_chain_lst **lst, int index);
 #endif
